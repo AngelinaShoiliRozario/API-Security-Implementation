@@ -1,0 +1,11 @@
+.container{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 700px;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+.container .title{
+    font-weight: bold;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Security Implementation</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>How to make our apis more secured!</h1>
+
+        <div>
+            <p>
+                RSA (Rivest-Shamir-Adleman) and AES (Advanced Encryption Standard) are two widely-used encryption algorithms
+                that can be used to secure a REST API.
+            </p>
+            <p>
+
+                <span class="title">RSA: </span>
+                RSA is a public-key cryptography algorithm that can be used to both encrypt and sign data. It uses a pair of
+                keys: a public key and a private key. The public key is used to encrypt data, while the private key is used
+                to decrypt it. RSA is often used to encrypt data transmitted over the internet because the public key can be
+                shared freely without compromising security.
+            </p>
+            <p>
+                <span class="title">AES: </span>
+                AES is a symmetric encryption algorithm that can be used to both encrypt and decrypt data. It uses a single
+                key for both operations, so the same key is used to encrypt and decrypt the data. AES is widely used due to
+                its high level of security and efficiency.
+            </p>
+            <p>
+                It's important to secure a REST API for several reasons:
+            <ul>
+                <li>
+                    Confidentiality: A REST API may be used to access sensitive data, such as personal information or
+                    financial transactions. Ensuring that this data is kept confidential is essential to protect against
+                    unauthorized access and disclosure.
+                </li>
+                <li>
+                    Integrity: It's important to ensure that the data transmitted through a REST API has not been
+                    tampered
+                    with or altered in any way. This helps to maintain the integrity of the data and prevent errors or
+                    fraud.
+                </li>
+                <li>
+                    Availability: Ensuring that a REST API is available and responsive is essential for the proper
+                    functioning of the client-side applications that rely on it. Protecting against attacks that could
+                    disrupt the availability of the API is important to maintain a good user experience.
+                </li>
+            </ul>
+
+
+
+
+            To encrypt a REST API with RSA and AES, you would typically follow these steps:
+            <ul>
+                <li>Generate a public/private RSA key pair. The public key is used to encrypt data, while the private key is
+                    used to decrypt it. The private key should be kept secret and secure, while the public key can be shared
+                    freely.</li>
+                <li> When a client wants to send data to the server, it first generates a random AES key (also known as a
+                    “symmetric key”). It then uses the server's public RSA key to encrypt the AES key.</li>
+                <li>The client uses the AES key to encrypt the data and sends the encrypted data and encrypted AES key to
+                    the server.</li>
+                <li>The server receives the encrypted data and encrypted AES key and uses its private RSA key to decrypt the
+                    AES key.</li>
+                <li>The server uses the decrypted AES key to decrypt the data.</li>
+            </ul>
+
+            <p>
+                Overall, using RSA and AES together can provide an extra layer of security for a REST API. RSA can be
+                used to encrypt the AES key, while AES is used to encrypt the actual data. This ensures that the data is
+                secure while in transit and that the AES key is not compromised.
+            </p>
+           
+            <p>
+                It's important to note that RSA and AES encryption should be used in conjunction with other security
+                measures, such as secure communication protocols (e.g. HTTPS) and proper authentication and
+                authorization, to ensure the overall security of a REST API.
+            </p>
+            
+            
+
+            </p>
+        </div>
+        <div>
+            JWT Token on both side serverside and client side.
+            AES and RSA algorithm.
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
